@@ -9,10 +9,26 @@ int fibonacci(int n) {
 
   return x;
 }
+int padovan(int n) {
+  int x= 0;
+  if(n==0){
+  x=1;  
+  }
+  if(n==1){
+  x=1;  
+  }
+  if(n==2){
+  x=1;  
+  }
+for (int i=1; i<n; i++) {
+    x=padovan(n-2)+padovan(n-3);
+  };return x;
+}
 
-int squares = 7;
+int squares = 15;
 void setup() {
   println("Numero de fibonacci 13 donde es =.", fibonacci(squares));
+  println("Numero de padovan 13 donde es =.", padovan(squares));
   size(720, 600);
 }
 
